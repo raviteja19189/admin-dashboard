@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, RouterLink],
   template: `
     <div class="login-container">
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
@@ -22,6 +22,9 @@ import { CommonModule } from '@angular/common';
         </div>
         <button type="submit" [disabled]="loginForm.invalid">Login</button>
       </form>
+      <div class="register-link">
+        Don’t have an account? <a routerLink="/register">Sign up here</a>
+      </div>
     </div>
   `,
   styles: [`
@@ -31,6 +34,8 @@ import { CommonModule } from '@angular/common';
     input { width: 100%; padding: 8px; }
     button { width: 100%; padding: 10px; background: #007bff; color: white; border: none; border-radius: 5px; }
     button:disabled { background: #ccc; }
+    .register-link { margin-top: 16px; text-align: center; }
+    .register-link a { color: #007bff; text-decoration: none; }
   `]
 })
 export class LoginComponent {

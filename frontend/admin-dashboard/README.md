@@ -1,59 +1,70 @@
-# AdminDashboard
+# Admin Dashboard
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.5.
+This is the admin dashboard frontend for the project, built with Angular 21.2.5. It is intended to provide administrative views and controls for user and system management.
+
+## Prerequisites
+
+- Node.js 18+ or newer
+- npm 10.2.5 (or compatible)
+- Angular CLI 21.2.5 installed locally via the workspace package
+
+## Install dependencies
+
+From the `frontend/admin-dashboard` directory, install dependencies with:
+
+```bash
+npm install
+```
 
 ## Development server
 
-To start a local development server, run:
+Start the local development server with:
 
 ```bash
-ng serve
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open your browser at `http://localhost:4200/` to view the admin dashboard. The app supports live reload when you modify source files.
 
-## Code scaffolding
+## Build
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Create a production build using:
 
 ```bash
-ng generate component component-name
+npm run build
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Build artifacts are generated in the `dist/` folder by default.
+
+## Watch mode
+
+Build the application in watch mode while developing:
 
 ```bash
-ng generate --help
+npm run watch
 ```
 
-## Building
+## Tests
 
-To build the project run:
+Run unit tests with:
 
 ```bash
-ng build
+npm test
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Project structure
 
-## Running unit tests
+- `src/` – main application source
+- `src/app/` – Angular app modules, components, routes, and guards
+- `src/index.html` – application entry page
+- `src/styles.css` – global styles
+- `tsconfig.json` / `tsconfig.app.json` – TypeScript configuration
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Notes
 
-```bash
-ng test
-```
+- This frontend is part of the larger workspace under `frontend/` and works alongside the backend services in `backend/`.
+- If you add Angular components or services, follow the existing folder structure under `src/app/`.
 
-## Running end-to-end tests
+## Additional resources
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+For Angular CLI usage and command details, see the [Angular CLI documentation](https://angular.dev/tools/cli).
